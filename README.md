@@ -1,8 +1,8 @@
 # dsh-plugins
 
-给 [DeepSeek Harness](https://github.com/deepseek-ai) 写的几个小插件，专门伺候「QQ 群里那只 AI」这件事。
+给 [DeepSeek Harness](https://github.com/deepseek-ai) 写的几个小插件。
 
-四个插件各管一段，拼起来是完整的一条链：**谁在说（人设卡）→ 记不记得（三档记忆）→ 这句该不该接（读空气）→ 用什么表情（表情库）**。
+四个插件链路结构：**谁在说（人设卡）→ 记不记得（三档记忆）→ 这句该不该接（读空气）→ 用什么表情（表情库）**。
 
 | 插件 | 管什么 | 一句话 |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ dsh plugin --profile web add github:yingchaoyi/dsh-sticker-vault
 | dsh-air-sense | 读空气：概览 / 规则（49 项）/ 日志 / 设置 | `~/.dsh/air-sense/store.json` |
 | dsh-sticker-vault | 表情库：入库图 / 候选 / 描述标签 / 上锁 | `~/.dsh/sticker-vault/` |
 
-数据都在 `~/.dsh/` 下，删目录就干净了。
+数据都在 `~/.dsh/` 下，删目录就行。
 
 ---
 
@@ -118,11 +118,7 @@ dsh plugin --profile web add github:yingchaoyi/dsh-sticker-vault
 
 ---
 
-## 为什么都做成插件
-
-- 装/卸就是加一行依赖，不想要了直接删；
-- 面板挂在设置里，参数自己调，不用改代码；
-- 数据都在 `~/.dsh/` 下，删目录就干净了；
+## 其他
 - 四个插件之间没有硬依赖：只装 persona-cards 也能用，只是没记忆；只装 air-sense 也能用，只是回的每句话都是默认人格。
 
 ## License
